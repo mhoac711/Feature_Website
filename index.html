@@ -7,7 +7,7 @@
         <div class = "main">
             <nav>
                 <div class ="logo">
-                    <img src = "">
+                    <img src = "images/cherry.jpg">
                 </div>
                 <div class ="nav-links">
                     <li><a href = "#">Home </a></li>
@@ -16,6 +16,73 @@
                     <li><a href = "#">Cart </a></li>
                 </div>
             </nav>
+
+            <div class = "information">
+                <div class="overlay"></div>
+                <img src="images/i.jpg" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="images/cute.jpg">
+                        <div>
+                            <h1>Cute</h1>
+                            <p>Very cute Hatsune Miku</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="images/dancehall.jpg">
+                        <div>
+                            <h1>dancehall</h1>
+                            <p>musica by Luka and Hatsune Miku</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="images/sea.jpg">
+                        <div>
+                            <h1>sea grill</h1>
+                            <p>sea Hatsune Miku</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="images/idk3.jpg">
+                        <div>
+                            <h1>idfk</h1>
+                            <p>it somethign</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="controls">
+                <img src="images/arrow.jpg" id="upBtn">
+                <h3>Features</h3>
+                <img src="images/arrow.jpg" id="dnBtn">
+            </div>
         </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var dnBtn = document.getElementById("dnBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            dnBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+
+
+        </script>
     </body>
 </html>
